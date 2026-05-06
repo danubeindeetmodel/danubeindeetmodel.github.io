@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Danube Indeet Model",
+    "section": "",
+    "text": "Preface\nThis is the documentation for version 0.3.10. (Version history). For download link and other useful information see the main model website.\nThis user manual introduces the Danube Indeet Model (DIM), a practical and user-friendly solution for planning and sizing investments in integrated energy and transport hubs based on renewable energy. The tool enables users to evaluate how locally available or imported renewable energy can be optimally used to charge EVs and/or to be converted into green hydrogen, while also efficiently integrated with electricity, gas, heating, and water networks.\nThe DIM delivers techno-economic insights, including optimal system configuration, CAPEX/OPEX estimates, and key financial indicators such as NPV, IRR, and ROI. Designed for municipalities, energy planners, development agencies, and investors, the DIM supports informed, data-driven decisions for developing cost-effective and future-ready hydrogen hubs.\nKey Features of the DIM:",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-ack",
+    "href": "index.html#sec-ack",
+    "title": "Danube Indeet Model",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nDevelopment of the tool has been funded by:\n\n\n\n\n\n\nEuropean Regional Development Fund (ERDF) through project\nIntegrated and decentralised concept rethinking energy and transport systems based on renewable energy in the Danube region (Danube Indeet)\ngrant number DRP0200088\n\nThe tool is developed and maintained by:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUniversity of Zagreb Faculty of Electrical Engineering and Computing\nDepartment for Control and Computer Engineering\nLaboratory for Renewable Energy Systems\nZagreb, Croatia\nlares@fer.hr",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-further",
+    "href": "index.html#sec-further",
+    "title": "Danube Indeet Model",
+    "section": "Further development",
+    "text": "Further development\nTo report issues, request changes, ask questions, or provide feedback, email us to:\nfilip.rukavina@fer.hr; ivan.grabic@fer.hr; marko.kovacevic@fer.hr; mario.vasak@fer.hr, with indication whether it is about:\n\nA bug – the tool does not operate as it should. Make sure to:\n\ntell us what you expected to happen,\ntell us what actually happened,\ntell us what version of the DIM you use,\nsend us screenshots of the problem,\nsend us the project file (.hyefre) where it happens.\n\nA change – you would like to see an improvement, whether it is to change an existing feature or adding a new one. Make sure you explain it in your email and tell us which version of the tool you are currently using.\nQuestions – just ask if you have questions or need assistance with tool usage.\nDocumentation – let us know if something is wrong or missing in the documentation.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-license",
+    "href": "index.html#sec-license",
+    "title": "Danube Indeet Model",
+    "section": "License",
+    "text": "License\nThe use and distribution of the software is free under the GPL License, Version 3.0 (the “License”). You may obtain a copy of the License at\nhttps://www.gnu.org/licenses/gpl-3.0.en.html.\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-cite",
+    "href": "index.html#sec-cite",
+    "title": "Danube Indeet Model",
+    "section": "How to cite",
+    "text": "How to cite\nTODO: add article to cite",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html",
+    "href": "09_version_history.html",
+    "title": "Version history",
+    "section": "",
+    "text": "2026-04-23 v0.3.9 build 009",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.3.9-build-009",
+    "href": "09_version_history.html#v0.3.9-build-009",
+    "title": "Version history",
+    "section": "",
+    "text": "bugfix: BESS SOE now multiplied by timestep duration to track energy\nbugfix: freeze GUI fix when optimizing without saving\nfeature: changed message for negative recommendations\nfeature: don’t show recommendation if N negative\nbugfix: EV OPEX calculations changed\nfeature: Run all optimizations added in Tools\nbugfix: PV profile PDF export\nbugfix: cost of REP in results\nbugfix: waiting screen locked when optimizing without saving",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.3-build-008",
+    "href": "09_version_history.html#v0.3-build-008",
+    "title": "Version history",
+    "section": "2025-12-17 v0.3 build 008",
+    "text": "2025-12-17 v0.3 build 008\n\nfeature: export results to PDF\nbugfix: energy export with REP\nbugfix: selling H2 to gas grid\nbugifx: values of default parameters\nbugfix: upper bounds in LP\nbugfix: weekly and monthly sales\nother fixes",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.3-build-007",
+    "href": "09_version_history.html#v0.3-build-007",
+    "title": "Version history",
+    "section": "2025-11-28 v0.3 build 007",
+    "text": "2025-11-28 v0.3 build 007\n\nresults showing full data",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.3-build-006",
+    "href": "09_version_history.html#v0.3-build-006",
+    "title": "Version history",
+    "section": "2025-11-27 v0.3 build 006",
+    "text": "2025-11-27 v0.3 build 006\n\nbugfixes for results",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.3-build-005",
+    "href": "09_version_history.html#v0.3-build-005",
+    "title": "Version history",
+    "section": "2025-11-27 v0.3 build 005",
+    "text": "2025-11-27 v0.3 build 005\n\nfeature: optimization is running\nfeature: results of the optimization are displayed\nfeature: advanced parameters of the electrical grid connection\nbugfixes",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.2-build-004",
+    "href": "09_version_history.html#v0.2-build-004",
+    "title": "Version history",
+    "section": "2025-10-21 v0.2 build 004",
+    "text": "2025-10-21 v0.2 build 004\n\nrefactor: project has only .indeet file (no more folders)\nrefactor: all profiles are contained in the .indeet file\nrefactor: temp and log folder are moved to application root folder\nrefactor: logs are still project-based, one file for each created project\nbugfix: project files can be opened on any computer\nnew feature: validation of input parameters\nbugfix: default simulation start and end dates corrected\nbugfix: electrolyser and fuel cell parameters calculation corrected\nbugfix: predefined parameters of electrolyser and fuel cell updated and corrected",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.2-build-003",
+    "href": "09_version_history.html#v0.2-build-003",
+    "title": "Version history",
+    "section": "2025-08-26 v0.2 build 003",
+    "text": "2025-08-26 v0.2 build 003\n\nfixed reading images from non-ASCII paths",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v0.2-build-002",
+    "href": "09_version_history.html#v0.2-build-002",
+    "title": "Version history",
+    "section": "2025-07-28 v0.2 build 002",
+    "text": "2025-07-28 v0.2 build 002\n\ninitial working GUI",
+    "crumbs": [
+      "Version history"
+    ]
+  }
+]
