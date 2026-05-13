@@ -8,7 +8,7 @@
 
 <meta name="description" content="Decision support tool for modelling infrastructure of combined energy and transport hubs.">
 
-<title>Version history – Danube Indeet Model</title>
+<title>2&nbsp; Getting started – Danube Indeet Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_results.html" rel="prev">
+<link href="./03_interface_overview.html" rel="next">
+<link href="./01_intro.html" rel="prev">
 <link href="./assets/img/00_preface/indeet_icon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -72,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09_version_history.html">Version history</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_getting_started.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -127,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="./02_getting_started.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
@@ -151,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09_version_history.html" class="sidebar-item-text sidebar-link active">
+  <a href="./09_version_history.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version history</span></a>
   </div>
 </li>
@@ -165,14 +195,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#v0.3.9-build-009" id="toc-v0.3.9-build-009" class="nav-link active" data-scroll-target="#v0.3.9-build-009">2026-04-23 v0.3.9 build 009</a></li>
-  <li><a href="#v0.3-build-008" id="toc-v0.3-build-008" class="nav-link" data-scroll-target="#v0.3-build-008">2025-12-17 v0.3 build 008</a></li>
-  <li><a href="#v0.3-build-007" id="toc-v0.3-build-007" class="nav-link" data-scroll-target="#v0.3-build-007">2025-11-28 v0.3 build 007</a></li>
-  <li><a href="#v0.3-build-006" id="toc-v0.3-build-006" class="nav-link" data-scroll-target="#v0.3-build-006">2025-11-27 v0.3 build 006</a></li>
-  <li><a href="#v0.3-build-005" id="toc-v0.3-build-005" class="nav-link" data-scroll-target="#v0.3-build-005">2025-11-27 v0.3 build 005</a></li>
-  <li><a href="#v0.2-build-004" id="toc-v0.2-build-004" class="nav-link" data-scroll-target="#v0.2-build-004">2025-10-21 v0.2 build 004</a></li>
-  <li><a href="#v0.2-build-003" id="toc-v0.2-build-003" class="nav-link" data-scroll-target="#v0.2-build-003">2025-08-26 v0.2 build 003</a></li>
-  <li><a href="#v0.2-build-002" id="toc-v0.2-build-002" class="nav-link" data-scroll-target="#v0.2-build-002">2025-07-28 v0.2 build 002</a></li>
+  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link active" data-scroll-target="#system-requirements"><span class="header-section-number">2.1</span> System requirements</a>
+  <ul>
+  <li><a href="#network" id="toc-network" class="nav-link" data-scroll-target="#network"><span class="header-section-number">2.1.1</span> Network</a></li>
+  </ul></li>
+  <li><a href="#simple-example" id="toc-simple-example" class="nav-link" data-scroll-target="#simple-example"><span class="header-section-number">2.2</span> Simple example</a>
+  <ul>
+  <li><a href="#step-1-launch-the-application" id="toc-step-1-launch-the-application" class="nav-link" data-scroll-target="#step-1-launch-the-application">Step 1: Launch the application</a></li>
+  <li><a href="#step-2-create-a-new-project" id="toc-step-2-create-a-new-project" class="nav-link" data-scroll-target="#step-2-create-a-new-project">Step 2: Create a new project</a></li>
+  <li><a href="#step-3-create-a-new-scenario" id="toc-step-3-create-a-new-scenario" class="nav-link" data-scroll-target="#step-3-create-a-new-scenario">Step 3: Create a new scenario</a></li>
+  <li><a href="#step-4-select-components" id="toc-step-4-select-components" class="nav-link" data-scroll-target="#step-4-select-components">Step 4: Select components</a></li>
+  <li><a href="#step-5-configure-location" id="toc-step-5-configure-location" class="nav-link" data-scroll-target="#step-5-configure-location">Step 5: Configure location</a></li>
+  <li><a href="#step-6-configure-electrical-grid" id="toc-step-6-configure-electrical-grid" class="nav-link" data-scroll-target="#step-6-configure-electrical-grid">Step 6: Configure electrical grid</a></li>
+  <li><a href="#step-7-configure-pv-system" id="toc-step-7-configure-pv-system" class="nav-link" data-scroll-target="#step-7-configure-pv-system">Step 7: Configure PV system</a></li>
+  <li><a href="#step-8-configure-bess" id="toc-step-8-configure-bess" class="nav-link" data-scroll-target="#step-8-configure-bess">Step 8: Configure BESS</a></li>
+  <li><a href="#step-9-configure-electricity-consumption" id="toc-step-9-configure-electricity-consumption" class="nav-link" data-scroll-target="#step-9-configure-electricity-consumption">Step 9: Configure electricity consumption</a></li>
+  <li><a href="#step-10-financial-parameters" id="toc-step-10-financial-parameters" class="nav-link" data-scroll-target="#step-10-financial-parameters">Step 10: Financial parameters</a></li>
+  <li><a href="#step-11-run-optimization" id="toc-step-11-run-optimization" class="nav-link" data-scroll-target="#step-11-run-optimization">Step 11: Run optimization</a></li>
+  <li><a href="#step-12-view-results" id="toc-step-12-view-results" class="nav-link" data-scroll-target="#step-12-view-results">Step 12: View Results</a></li>
+  </ul></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">2.3</span> Next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-history" class="quarto-section-identifier">Version history</span></h1>
+<h1 class="title"><span id="sec-get-start" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></span></h1>
 </div>
 
 
@@ -198,81 +240,301 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="system-requirements" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="system-requirements"><span class="header-section-number">2.1</span> System requirements</h2>
+<p>The Danube Indeet Model (DIM) is a Windows desktop application.</p>
 <ul>
-<li>feature: added user manual</li>
+<li><strong>Operating system</strong>: Windows 10 or newer (64-bit)<br>
+</li>
+<li><strong>Processor (CPU)</strong>: No strict requirements<br>
+</li>
+<li><strong>Memory (RAM)</strong>: Minimum 16 GB, 32 GB or more recommended<br>
+</li>
+<li><strong>Graphics (GPU)</strong>: Not required for computation</li>
 </ul>
-<section id="v0.3.9-build-009" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.3.9-build-009">2026-04-23 v0.3.9 build 009</h2>
+<section id="network" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="network"><span class="header-section-number">2.1.1</span> Network</h3>
+<p>An internet connection is required for:</p>
 <ul>
-<li>bugfix: BESS SOE now multiplied by timestep duration to track energy</li>
-<li>bugfix: freeze GUI fix when optimizing without saving</li>
-<li>feature: changed message for negative recommendations</li>
-<li>feature: don’t show recommendation if N negative</li>
-<li>bugfix: EV OPEX calculations changed</li>
-<li>feature: Run all optimizations added in Tools</li>
-<li>bugfix: PV profile PDF export</li>
-<li>bugfix: cost of REP in results</li>
-<li>bugfix: waiting screen locked when optimizing without saving</li>
+<li>location-based data,<br>
+</li>
+<li>PV production data,<br>
+</li>
+<li>meteorological data (e.g., precipitation).</li>
 </ul>
+<p>The application can run offline, but these features will be unavailable.</p>
 </section>
-<section id="v0.3-build-008" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.3-build-008">2025-12-17 v0.3 build 008</h2>
-<ul>
-<li>feature: export results to PDF</li>
-<li>bugfix: energy export with REP</li>
-<li>bugfix: selling H2 to gas grid</li>
-<li>bugifx: values of default parameters</li>
-<li>bugfix: upper bounds in LP</li>
-<li>bugfix: weekly and monthly sales</li>
-<li>other fixes</li>
-</ul>
 </section>
-<section id="v0.3-build-007" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.3-build-007">2025-11-28 v0.3 build 007</h2>
+<section id="simple-example" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="simple-example"><span class="header-section-number">2.2</span> Simple example</h2>
+<p>This section guides you through creating a simple project with one scenario containing:</p>
 <ul>
-<li>results showing full data</li>
+<li>A <strong>Photovoltaic (PV) system</strong>,</li>
+<li>A <strong>Battery Energy Storage System (BESS)</strong>, and</li>
+<li>A fixed electricity consumption.</li>
 </ul>
+<p>By following these steps, you will learn the basic workflow of the DIM: creating a project, configuring components, running optimization, and viewing results.</p>
+<section id="step-1-launch-the-application" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-1-launch-the-application">Step 1: Launch the application</h3>
+<ol type="1">
+<li>Launch the Danube Indeet Model application.</li>
+<li>You will see the welcome window with options to create a new project, open an existing project, or check the user manual.</li>
+</ol>
+<div id="fig-getting_started_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_1.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Welcome window.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="v0.3-build-006" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.3-build-006">2025-11-27 v0.3 build 006</h2>
-<ul>
-<li>bugfixes for results</li>
-</ul>
+<section id="step-2-create-a-new-project" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-2-create-a-new-project">Step 2: Create a new project</h3>
+<ol type="1">
+<li>Click <strong>Create new project</strong> in the welcome window.</li>
+<li>The <em>New Project</em> popup window will appear.</li>
+<li>Enter a project name (e.g., <code>My project</code>).</li>
+<li>Optionally, change the project location by clicking <strong>Browse…</strong> and selecting a folder.</li>
+<li>Click <strong>Create project</strong> to confirm.</li>
+</ol>
+<div id="fig-getting_started_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_2.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Creating a new project.
+</figcaption>
+</figure>
+</div>
+<p>A new project opens in the main window.</p>
 </section>
-<section id="v0.3-build-005" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.3-build-005">2025-11-27 v0.3 build 005</h2>
-<ul>
-<li>feature: optimization is running</li>
-<li>feature: results of the optimization are displayed</li>
-<li>feature: advanced parameters of the electrical grid connection</li>
-<li>bugfixes</li>
-</ul>
+<section id="step-3-create-a-new-scenario" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-3-create-a-new-scenario">Step 3: Create a new scenario</h3>
+<ol type="1">
+<li>Click <strong>Add new scenario</strong> in the sidebar (left panel).</li>
+<li>A default scenario named <code>Scenario 1</code> will appear.</li>
+<li>Expand the scenario and click <strong>System structure</strong> to view the system configuration interface.</li>
+</ol>
+<div id="fig-getting_started_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_3.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Project with one scenario
+</figcaption>
+</figure>
+</div>
+<p>The <em>Main window</em> now shows the system configuration interface.</p>
 </section>
-<section id="v0.2-build-004" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.2-build-004">2025-10-21 v0.2 build 004</h2>
+<section id="step-4-select-components" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-4-select-components">Step 4: Select components</h3>
+<p>In this example we will consider:</p>
 <ul>
-<li>refactor: project has only .indeet file (no more folders)</li>
-<li>refactor: all profiles are contained in the .indeet file</li>
-<li>refactor: temp and log folder are moved to application root folder</li>
-<li>refactor: logs are still project-based, one file for each created project</li>
-<li>bugfix: project files can be opened on any computer</li>
-<li>new feature: validation of input parameters</li>
-<li>bugfix: default simulation start and end dates corrected</li>
-<li>bugfix: electrolyser and fuel cell parameters calculation corrected</li>
-<li>bugfix: predefined parameters of electrolyser and fuel cell updated and corrected</li>
+<li>Electrical grid connection</li>
+<li>PV system,</li>
+<li>BESS,</li>
+<li>fixed electricity consumption.</li>
 </ul>
+<p>The scenario is initialized with all components already selected. To configure our desired configuration:</p>
+<ol type="1">
+<li>Deselect components that are not needed (e.g., Electrolyser, EV chargers).</li>
+<li>Ensure the following components are selected: El. grid, PV, BESS, El. cons.</li>
+</ol>
+<div id="fig-getting_started_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_4.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Selecting components for the configuration.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="v0.2-build-003" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.2-build-003">2025-08-26 v0.2 build 003</h2>
-<ul>
-<li>fixed reading images from non-ASCII paths</li>
-</ul>
+<section id="step-5-configure-location" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-5-configure-location">Step 5: Configure location</h3>
+<p>The <strong>Location</strong> component defines where the energy hub is located. This affects solar irradiance data and other location-specific parameters.</p>
+<ol type="1">
+<li>Expand the <strong>Location</strong> section.</li>
+<li>Search for <em>Zagreb</em>.</li>
+<li>Select <strong>Zagreb</strong> in Municipality dropdown.</li>
+<li>Verify that your coordintes are: 45.813, 15.977 and that country is Croatia.</li>
+</ol>
+<div id="fig-getting_started_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_5.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Choosing location.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="v0.2-build-002" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="v0.2-build-002">2025-07-28 v0.2 build 002</h2>
+<section id="step-6-configure-electrical-grid" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-6-configure-electrical-grid">Step 6: Configure electrical grid</h3>
+<p>The <strong>Electrical grid connection</strong> component defines electricity prices and connection conditions. Since the location is in Croatia, electricity tariff models from Croatia became available to use. To configure:</p>
+<ol type="1">
+<li>Expand the <strong>Electrical grid connection</strong> section.</li>
+<li>Expand <strong>Grid connection</strong> tree node.</li>
+<li>For <strong>Use predefined connection type</strong> select <code>SN - Bijeli - Zagreb</code>.</li>
+<li>Check <strong>Grid connection already exists</strong>.</li>
+<li>Set <strong>Existing connection size</strong> to 270 kW.</li>
+<li>Expand <strong>Electricity supply</strong> tree node.</li>
+<li>For <strong>Use predefined supply models</strong> select <code>HEP elektra - SN bijeli</code>.</li>
+</ol>
+<div id="fig-getting_started_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_6.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Configuring the Electrical grid connection.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-7-configure-pv-system" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-7-configure-pv-system">Step 7: Configure PV system</h3>
+<p>The <strong>PV</strong> component represents solar energy generation capacity. In this example, we only define the available installation area.</p>
+<ol type="1">
+<li>Expand the <strong>Photovoltaic (PV) system</strong> section</li>
+<li>Click <strong>Add new array</strong>, then click <strong>Done</strong> in the pop-up window.</li>
+<li>You will see a default PV array. Configure the following:
 <ul>
-<li>initial working GUI</li>
+<li><strong>Available area</strong>: Enter the area of 1000 m<span class="math inline">\(^2\)</span></li>
+</ul></li>
+</ol>
+<div id="fig-getting_started_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_7.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.7: Configuring the PV system.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-8-configure-bess" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-8-configure-bess">Step 8: Configure BESS</h3>
+<p>The <strong>Battery Energy Storage System (BESS)</strong> stores excess solar energy for later use. Since the default parameters for BESS are already entered we can just skip BESS component.</p>
+</section>
+<section id="step-9-configure-electricity-consumption" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-9-configure-electricity-consumption">Step 9: Configure electricity consumption</h3>
+<ol type="1">
+<li>Expand the <strong>Electricity consumption</strong> section.</li>
+<li>Click <strong>Add new consumer</strong>, then click <strong>Done</strong> in the pop-up window.</li>
+<li>Select building type:
+<ul>
+<li><strong>Large hotel</strong></li>
+</ul></li>
+<li>Enter:
+<ul>
+<li><strong>Annual electricity consumption</strong>: 1000 MWh</li>
+</ul></li>
+</ol>
+<div id="fig-getting_started_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_8.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.8: Configuring Electricity consumption.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-10-financial-parameters" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-10-financial-parameters">Step 10: Financial parameters</h3>
+<p>In this example we will set subsidy to 50%:</p>
+<ol type="1">
+<li>Click on <strong>Apply subsidy to all components</strong>.</li>
+<li>Enter 50% in <strong>Investment subsidy</strong> field.</li>
+</ol>
+<div id="fig-getting_started_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_9.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.9: Adding subsidy to all components.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-11-run-optimization" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-11-run-optimization">Step 11: Run optimization</h3>
+<p>Once all components are configured:</p>
+<ol type="1">
+<li>Scroll to the bottom of the System structure view.</li>
+<li>Click <strong>Run Optimization</strong> to start the optimization process.</li>
+<li>A progress indicator will appear during computation.</li>
+<li>After completion, the <strong>Results</strong> node will appear in the Sidebar under the scenario.</li>
+</ol>
+<div id="fig-getting_started_10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_10.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.10: Successful optimization.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-12-view-results" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-12-view-results">Step 12: View Results</h3>
+<ol type="1">
+<li>In the Sidebar, click <strong>Results</strong> under the scenario.</li>
+</ol>
+<div id="fig-getting_started_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_11.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.11: Showing results of the optimization.
+</figcaption>
+</figure>
+</div>
+<p>The Main window now displays the calculated optimal system configuration, its optimal operation, and financial indicators.</p>
+</section>
+</section>
+<section id="next-steps" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">2.3</span> Next steps</h2>
+<p>You have now created a project and optimized a scenario with a simple PV + BESS system. Based on your location’s solar resources and your specified constraints, the optimization algorithm has determined:</p>
+<ul>
+<li>Optimal system sizes</li>
+<li>Operational schedule</li>
+<li>Financial performance</li>
 </ul>
+<p>After optimization, the original scenario becomes locked and inputs cannot be modified.</p>
+<p>To test alternative assumptions:</p>
+<ol type="1">
+<li>Right-click the scenario in the Sidebar.</li>
+<li>Select <strong>Duplicate</strong>.</li>
+<li>Modify parameters in the duplicated scenario.</li>
+<li>Run the optimization again.</li>
+<li>Compare results.</li>
+</ol>
+<div id="fig-getting_started_12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-getting_started_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/img/02_getting_started/getting_started_12.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-getting_started_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.12: Right-clicking the scenario in the Sidebar.
+</figcaption>
+</figure>
+</div>
+<p>For example, try changing the subsidy from 50% to 0% and observe how this affects the investment decision.</p>
+<p>For more detailed information about each component, refer to <a href="04_00_system_structure.html#sec-component-details" class="quarto-xref"><span>Section 4.2</span></a>.</p>
 
 
 </section>
@@ -680,11 +942,14 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./05_results.html" class="pagination-link" aria-label="Results">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span>
+      <a href="./01_intro.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./03_interface_overview.html" class="pagination-link" aria-label="Interface overview">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Interface overview</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
