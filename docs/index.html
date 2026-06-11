@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>Danube Indeet Model</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -35,15 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./assets/img/00_preface/indeet_icon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -204,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
 <hr>
-<p>This is the documentation for version 0.3.10. (<a href="./09_version_history.html">Version history</a>). For download link and other useful information see the <a href="https://www.lares.fer.hr/lares/projects/software_and_demo/danube_indeet_model">main model website</a>.</p>
+<p>This is the documentation for version 1.0.0. (<a href="./09_version_history.html">Version history</a>). For download link and other useful information see the <a href="https://www.lares.fer.hr/lares/projects/software_and_demo/danube_indeet_model">main model website</a>.</p>
 <hr>
 <p>This user manual introduces the <strong>Danube Indeet Model (DIM)</strong>, a practical and user-friendly solution for planning and sizing investments in integrated energy and transport hubs based on renewable energy. The tool enables users to evaluate how locally available or imported renewable energy can be optimally used to charge EVs and/or to be converted into green hydrogen, while also efficiently integrated with electricity, gas, heating, and water networks.</p>
 <div id="fig-DIM_scheme_v1.0-full" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
@@ -220,73 +222,9 @@ Figure&nbsp;1: Diagram of the overall system configuration that can be modelled.
 <p>The DIM delivers techno-economic insights, including optimal system configuration, CAPEX/OPEX estimates, and key financial indicators such as NPV, IRR, and ROI. Designed for municipalities, energy planners, development agencies, and investors, the DIM supports informed, data-driven decisions for developing cost-effective and future-ready hydrogen hubs.</p>
 <p>Key Features of the DIM:</p>
 <ul>
-<li><dl>
-<dt>🚗 <strong>Flexible EV charging including V2G</strong></dt>
-<dd>
-Smart charging of EVs, including vehicle-to-grid, helps to balance the grid.
-</dd>
-</dl></li>
-<li><dl>
-<dt>🔋 <strong>Green hydrogen focus</strong></dt>
-<dd>
-Convert local and regional renewable energy surpluses into clean, versatile hydrogen.
-</dd>
-</dl></li>
-<li><dl>
-<dt>🌐 <strong>Multi-grid integration</strong></dt>
-<dd>
-Seamlessly plan interactions across electricity, gas, heating, and water networks.
-</dd>
-</dl></li>
-<li><dl>
-<dt>☀️ <strong>Flexible renewable energy input</strong></dt>
-<dd>
-Input renewable energy manually, or define local solar PV capacity.
-</dd>
-</dl></li>
-<li><dl>
-<dt>🔧 <strong>Comprehensive system modelling</strong></dt>
-<dd>
-Understand every component and how they interact within the overall system.
-</dd>
-</dl></li>
-<li><dl>
-<dt>💰 <strong>Techno-economic analysis</strong></dt>
-<dd>
-Get CAPEX/OPEX estimates and financial indicators like NPV, IRR, ROI, and payoff period.
-</dd>
-</dl></li>
-<li><dl>
-<dt>📊 <strong>Optimal sizing &amp; operation</strong></dt>
-<dd>
-Receive recommendations for sizing electrolysers, fuel cells, photovoltaics, wind farms, energy storage, and more, plus operation schedules.
-</dd>
-</dl></li>
-<li><dl>
-<dt>🖥️ <strong>Intuitive graphical interface</strong></dt>
-<dd>
-User-friendly GUI for easy input, visualization, and interpretation of results.
-</dd>
-</dl></li>
-<li><dl>
-<dt>🔍 <strong>Built on proven optimization tools</strong></dt>
-<dd>
-Leverages and expands the <a href="https://www.lares.fer.hr/lares/projects/software_and_demo/danup2gas_optimization_tool">DanuP-2-Gas Optimization Tool</a> for advanced system planning.
-</dd>
-</dl></li>
-<li><dl>
-<dt>👥 <strong>Targeted user support</strong></dt>
-<dd>
-Designed for municipalities, energy planners, development agencies, and private investors.
-</dd>
-</dl></li>
-<li><dl>
-<dt>📈 <strong>Scenario analysis capability</strong></dt>
-<dd>
-Explore dynamic planning scenarios to optimize infrastructure, investment, and performance.
-</dd>
-</dl></li>
+<li>🚗 <strong>Flexible EV charging including V2G</strong></li>
 </ul>
+<p>: Smart charging of EVs, including vehicle-to-grid, helps to balance the grid. - 🔋 <strong>Green hydrogen focus</strong> : Convert local and regional renewable energy surpluses into clean, versatile hydrogen. - 🌐 <strong>Multi-grid integration</strong> : Seamlessly plan interactions across electricity, gas, heating, and water networks. - ☀️ <strong>Flexible renewable energy input</strong> : Input renewable energy manually, or define local solar PV capacity. - 🔧 <strong>Comprehensive system modelling</strong> : Understand every component and how they interact within the overall system. - 💰 <strong>Techno-economic analysis</strong> : Get CAPEX/OPEX estimates and financial indicators like NPV, IRR, ROI, and payoff period. - 📊 <strong>Optimal sizing &amp; operation</strong> : Receive recommendations for sizing electrolysers, fuel cells, photovoltaics, wind farms, energy storage, and more, plus operation schedules. - 🖥️ <strong>Intuitive graphical interface</strong> : User-friendly GUI for easy input, visualization, and interpretation of results. - 🔍 <strong>Built on proven optimization tools</strong> : Leverages and expands the <a href="https://www.lares.fer.hr/lares/projects/software_and_demo/danup2gas_optimization_tool">DanuP-2-Gas Optimization Tool</a> for advanced system planning. - 👥 <strong>Targeted user support</strong> : Designed for municipalities, energy planners, development agencies, and private investors. - 📈 <strong>Scenario analysis capability</strong> : Explore dynamic planning scenarios to optimize infrastructure, investment, and performance.</p>
 <section id="sec-ack" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-ack">Acknowledgements</h2>
 <p>Development of the tool has been funded by:</p>
@@ -320,13 +258,13 @@ grant number DRP0200088</p>
 <p><em>University of Zagreb Faculty of Electrical Engineering and Computing</em><br>
 <em>Department for Control and Computer Engineering</em><br>
 <em>Laboratory for Renewable Energy Systems</em><br>
-<em>Zagreb, Croatia</em><br>
-<em><a href="mailto:lares@fer.hr">lares@fer.hr</a></em></p>
+<em>Zagreb, Croatia</em></p>
 </div>
 </section>
 <section id="sec-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-further">Further development</h2>
-<p>To report issues, request changes, ask questions, or provide feedback, email us to <a href="mailto:lares@fer.hr?cc=mario.vasak@fer.hr&amp;subject=DanubeIndeetModel%20--%20inquiry">lares@fer.hr</a>,<br> with indication whether it is about:</p>
+<p>To report issues, request changes, ask questions, or provide feedback, email us to<br>
+<a href="mailto:ivan.grabic@fer.hr;filip.rukavina@fer.hr?cc=mario.vasak@fer.hr&amp;subject=DanubeIndeetModel%20--%20inquiry">ivan.grabic@fer.hr; filip.rukavina@fer.hr; mario.vasak@fer.hr</a>,<br> with indication whether it is about:</p>
 <ul>
 <li><p>A <strong>bug</strong> – the tool does not operate as it should. Make sure to:</p>
 <ul>

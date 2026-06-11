@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>4&nbsp; System structure – Danube Indeet Model</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -36,15 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./assets/img/00_preface/indeet_icon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -1272,6 +1274,14 @@ The country is automatically selected according to the site location, but it can
 </tbody>
 </table>
 <p><br> <strong>Charging demand – Import data</strong></p>
+<p>The imported CSV file must contain the following four columns:</p>
+<ul>
+<li>Start time – time when the vehicle becomes available for charging</li>
+<li>End charge time – latest time by which charging must be completed</li>
+<li>Disconnect time – time when the vehicle disconnects from the charger</li>
+<li>Required energy [kWh] – total energy that must be delivered during the charging session</li>
+</ul>
+<p>Format of the timestamps must be <strong>DD/MM/YY/ hh:mm</strong> (e.g.&nbsp;16/01/24/ 08:33).</p>
 <table class="table-striped caption-top table">
 <colgroup>
 <col style="width: 24%">
@@ -1285,15 +1295,7 @@ The country is automatically selected according to the site location, but it can
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Import mode</strong> <br> [radio buttons]</td>
-<td style="text-align: left;">Selects the type of EV charging data to import. Two options are available: <br> - Demand profile – imports a fixed EV charging power demand profile over time. The imported demand is treated as inflexible and cannot be shifted or optimized. <br> - Session data – imports individual EV charging sessions that can be scheduled and optimized by the tool.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Session data format</strong></td>
-<td style="text-align: left;">When Session data is selected, the imported CSV file must contain the following four columns: <br> - Start time – time when the vehicle becomes available for charging <br> - End charge time – latest time by which charging must be completed <br> - Disconnect time – time when the vehicle disconnects from the charger <br> - Required energy [kWh] – total energy that must be delivered during the charging session</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Custom demand/session data</strong> <br> [text field]</td>
+<td style="text-align: left;"><strong>Custom session data</strong> <br> [text field]</td>
 <td style="text-align: left;">Displays the name of the CSV file containing the time series data. The field cannot be edited manually and is automatically populated after selecting a file using the <em>Browse…</em> button.</td>
 </tr>
 <tr class="even">
@@ -3621,78 +3623,42 @@ The country is automatically selected according to the site location, but it can
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-run-optim"><span class="header-section-number">4.3</span> Run optimization</h2>
 <p>After configuring all system components and their parameters, click <strong>Run optimization</strong> to generate the results. Once clicked, the tool performs the following sequence of operations:</p>
 <ol type="1">
-<li><dl>
-<dt><strong>Project save prompt</strong></dt>
-<dd>
-The tool first asks whether you want to <strong>save the project</strong> before starting the optimization. You can choose to:
-<ul>
-<li>save the project,<br>
-</li>
-<li>continue without saving, or<br>
-</li>
-<li>cancel the optimization.</li>
-</ul>
-</dd>
-</dl>
-<p>Saving the project is recommended in case an error occurs and the application closes unexpectedly.</p></li>
-<li><dl>
-<dt><strong>Data validation</strong></dt>
-<dd>
-The tool validates all parameters and their combinations to ensure they are within allowed ranges. If an invalid value is detected, a pop-up window titled <strong>Input validation failed</strong> appears. The message:
-<ul>
-<li>identifies the component where the issue occurs, and<br>
-</li>
-<li>explains the reason for the failure.</li>
-</ul>
-</dd>
-</dl>
-<p>Only the first detected issue is shown. After resolving it, run the optimization again to reveal any remaining issues.</p></li>
-<li><dl>
-<dt><strong>Data processing</strong></dt>
-<dd>
-The tool prepares all required inputs for the optimization, including:
-<ul>
-<li>obtaining profiles from online sources (PVGIS, Open-Meteo),<br>
-</li>
-<li>scaling profiles according to user-defined values,<br>
-</li>
-<li>generating and converting additional parameters (e.g., unit adjustments).</li>
-</ul>
-</dd>
-</dl>
-<p>During this phase, additional validation is performed on the processed data.<br>
-If validation fails here, the cause is usually:</p>
-<ul>
-<li>an incompatible combination of parameters, or<br>
-</li>
-<li>a temporary internet connectivity issue.</li>
-</ul></li>
-<li><dl>
-<dt><strong>Problem generation</strong></dt>
-<dd>
-After successful data preparation, the tool formulates the optimization problem and passes it to the solver.
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>Solving the problem</strong></dt>
-<dd>
-The optimization problem is solved using the open-source <a href="https://highs.dev/">HiGHS</a> solver. When the solver finishes, one of the following status messages is displayed:
-<ul>
-<li><strong>Successful optimization</strong> – the optimal solution was found.<br>
-</li>
-<li><strong>Time limit reached</strong> – a feasible but suboptimal solution was obtained.<br>
-</li>
-<li><strong>Unexpected error</strong> – the solver failed to complete.</li>
-</ul>
-</dd>
-</dl></li>
-<li><dl>
-<dt><strong>Results post-processing</strong></dt>
-<dd>
-After a successful run, the tool processes the results for presentation. A new window (<a href="05_results.html">Results</a>) is created under the scenario tree node and automatically opened in the main workspace.
-</dd>
-</dl></li>
+<li><strong>Project save prompt</strong></li>
 </ol>
+<p>: The tool first asks whether you want to <strong>save the project</strong> before starting the optimization. You can choose to: - save the project,<br>
+- continue without saving, or<br>
+- cancel the optimization.</p>
+<pre><code>Saving the project is recommended in case an error occurs and the application closes unexpectedly.</code></pre>
+<ol start="2" type="1">
+<li><strong>Data validation</strong></li>
+</ol>
+<p>: The tool validates all parameters and their combinations to ensure they are within allowed ranges. If an invalid value is detected, a pop-up window titled <strong>Input validation failed</strong> appears. The message: - identifies the component where the issue occurs, and<br>
+- explains the reason for the failure.</p>
+<pre><code>Only the first detected issue is shown. After resolving it, run the optimization again to reveal any remaining issues.</code></pre>
+<ol start="3" type="1">
+<li><strong>Data processing</strong></li>
+</ol>
+<p>: The tool prepares all required inputs for the optimization, including: - obtaining profiles from online sources (PVGIS, Open-Meteo),<br>
+- scaling profiles according to user-defined values,<br>
+- generating and converting additional parameters (e.g., unit adjustments).</p>
+<pre><code>During this phase, additional validation is performed on the processed data.  
+If validation fails here, the cause is usually:
+- an incompatible combination of parameters, or  
+- a temporary internet connectivity issue.</code></pre>
+<ol start="4" type="1">
+<li><strong>Problem generation</strong></li>
+</ol>
+<p>: After successful data preparation, the tool formulates the optimization problem and passes it to the solver.</p>
+<ol start="5" type="1">
+<li><strong>Solving the problem</strong></li>
+</ol>
+<p>: The optimization problem is solved using the open-source <a href="https://highs.dev/">HiGHS</a> solver. When the solver finishes, one of the following status messages is displayed: - <strong>Successful optimization</strong> – the optimal solution was found.<br>
+- <strong>Time limit reached</strong> – a feasible but suboptimal solution was obtained.<br>
+- <strong>Unexpected error</strong> – the solver failed to complete.</p>
+<ol start="6" type="1">
+<li><strong>Results post-processing</strong></li>
+</ol>
+<p>: After a successful run, the tool processes the results for presentation. A new window (<a href="05_results.html">Results</a>) is created under the scenario tree node and automatically opened in the main workspace.</p>
 <dl>
 <dt><strong>Waiting</strong></dt>
 <dd>
